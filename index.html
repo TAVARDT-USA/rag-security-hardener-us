@@ -8,6 +8,18 @@
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <link rel="shortcut icon" href="./favicon.ico">
   <link rel="canonical" href="https://tavardt-usa.github.io/rag-security-hardener-us/">
+  <link rel="alternate" hreflang="pt-BR" href="https://tavardt-brasil.github.io/rag-security-hardener-br/">
+  <link rel="alternate" hreflang="pt-PT" href="https://tavardt-portugal.github.io/rag-security-hardener-pt/">
+  <link rel="alternate" hreflang="en-US" href="https://tavardt-usa.github.io/rag-security-hardener-us/">
+  <link rel="alternate" hreflang="en-GB" href="https://tavardt-uk.github.io/rag-security-hardener-uk/">
+  <link rel="alternate" hreflang="en-CA" href="https://tavardt-canada.github.io/rag-security-hardener-ca/">
+  <link rel="alternate" hreflang="en-AU" href="https://tavardt-australia.github.io/rag-security-hardener-au/">
+  <link rel="alternate" hreflang="en-NZ" href="https://tavardt-new-zealand.github.io/rag-security-hardener-nz/">
+  <link rel="alternate" hreflang="es-ES" href="https://tavardt-espana.github.io/rag-security-hardener-es/">
+  <link rel="alternate" hreflang="es-MX" href="https://tavardt-mexico.github.io/rag-security-hardener-mx/">
+  <link rel="alternate" hreflang="fr-FR" href="https://tavardt-france.github.io/rag-security-hardener-fr/">
+  <link rel="alternate" hreflang="it-IT" href="https://tavardt-italia.github.io/rag-security-hardener-it/">
+  <link rel="alternate" hreflang="x-default" href="https://tavardt-usa.github.io/rag-security-hardener-us/">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TAVARDT">
@@ -72,6 +84,52 @@
           "position": 3,
           "name": "RAG Security Hardener",
           "item": "https://tavardt-usa.github.io/rag-security-hardener-us/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tavardt-usa.github.io/rag-security-hardener-us/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an indirect prompt injection attack in RAG pipelines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It occurs when untrusted retrieved content contains adversarial instructions that the model mistakes for system commands, overriding its intended behavior."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do poisoned chunks corrupt semantic search?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Attackers craft adversarial texts designed to match target vector embeddings closely, guaranteeing their inclusion in the retrieved context."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How should multi-tenant vector databases be isolated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By enforcing strict role-based access control (RBAC), cryptographically separated namespaces, and mandatory server-side tenant_id metadata filtering on every query."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What sanitization must take place before feeding context to an LLM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sanitization of control tokens, explicit delimiter isolation (XML or Markdown envelopes), and heuristic filtering of imperative prompt statements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does TAVARDT design secure RAG architectures?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TAVARDT builds zero-trust RAG pipelines featuring bidirectional chunk validation, vector database partitioning, and edge-level inference proxying."
+          }
         }
       ]
     }
@@ -511,6 +569,151 @@ textarea:focus, input[type="text"]:focus {
   color: #64748b !important;
 }
 
+
+/* ==========================================================================
+   TAVARDT UNIFIED 1200PX CONTAINER ALIGNMENT & AEO/GEO/FAQ DESIGN TOKENS
+   ========================================================================== */
+.container, .main-wrap, main, .tavardt-hero, .hero {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+  box-sizing: border-box !important;
+}
+.card, .main-card, .panel, .stage-card, .results-section, .workspace-grid {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.aeo-card {
+  width: 100% !important;
+  background: #0e1526 !important;
+  border: 1px solid rgba(30, 0, 255, 0.3) !important;
+  border-left: 4px solid #1e00ff !important;
+  border-radius: 16px !important;
+  padding: 28px 32px !important;
+  margin: 32px 0 !important;
+  box-sizing: border-box !important;
+}
+.aeo-card h2 {
+  font-size: 1.2rem !important;
+  color: #ffffff !important;
+  margin-bottom: 12px !important;
+  font-weight: 700 !important;
+}
+.aeo-card p {
+  font-size: 0.98rem !important;
+  color: #cbd5e1 !important;
+  line-height: 1.7 !important;
+}
+.vectors-section {
+  width: 100% !important;
+  margin: 32px 0 !important;
+  box-sizing: border-box !important;
+}
+.vectors-section h2 {
+  font-size: 1.25rem !important;
+  color: #ffffff !important;
+  margin-bottom: 18px !important;
+  font-weight: 700 !important;
+}
+.vectors-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 16px !important;
+  width: 100% !important;
+}
+.vector-card {
+  background: #0b101e !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  padding: 22px !important;
+  box-sizing: border-box !important;
+}
+.vector-title {
+  font-size: 0.96rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin-bottom: 8px !important;
+}
+.vector-desc {
+  font-size: 0.88rem !important;
+  color: #94a3b8 !important;
+  line-height: 1.5 !important;
+}
+.faq-section {
+  width: 100% !important;
+  margin: 36px 0 !important;
+  box-sizing: border-box !important;
+}
+.faq-section h2 {
+  font-size: 1.25rem !important;
+  color: #ffffff !important;
+  margin-bottom: 18px !important;
+  font-weight: 700 !important;
+}
+.faq-item {
+  background: #0b101e !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px !important;
+  margin-bottom: 14px !important;
+  padding: 18px 24px !important;
+  transition: border-color 0.2s !important;
+  box-sizing: border-box !important;
+}
+.faq-item[open] {
+  border-color: rgba(30, 0, 255, 0.4) !important;
+}
+.faq-question {
+  cursor: pointer !important;
+  font-weight: 600 !important;
+  font-size: 0.96rem !important;
+  color: #ffffff !important;
+  outline: none !important;
+}
+.faq-answer {
+  margin-top: 12px !important;
+  font-size: 0.92rem !important;
+  color: #94a3b8 !important;
+  line-height: 1.6 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+  padding-top: 12px !important;
+}
+.cta-card {
+  width: 100% !important;
+  background: linear-gradient(135deg, rgba(30, 0, 255, 0.2) 0%, rgba(11, 16, 30, 0.9) 100%) !important;
+  border: 1px solid rgba(30, 0, 255, 0.4) !important;
+  border-radius: 16px !important;
+  padding: 36px 32px !important;
+  text-align: center !important;
+  margin: 36px 0 !important;
+  box-sizing: border-box !important;
+}
+.cta-card h3 { font-size: 1.35rem !important; font-weight: 800 !important; margin-bottom: 10px !important; color: #ffffff !important; }
+.cta-card p { color: #94a3b8 !important; max-width: 720px !important; margin: 0 auto 24px !important; font-size: 0.98rem !important; }
+.cta-btns { display: flex !important; gap: 16px !important; justify-content: center !important; flex-wrap: wrap !important; }
+.btn-wa {
+  background: #1e00ff !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  padding: 14px 32px !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 0 25px rgba(30, 0, 255, 0.6) !important;
+  transition: all 0.2s !important;
+  display: inline-block !important;
+}
+.btn-wa:hover { transform: translateY(-2px) !important; box-shadow: 0 0 35px rgba(30, 0, 255, 0.9) !important; }
+.btn-corp {
+  background: #0b101e !important;
+  color: #f8fafc !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  padding: 14px 28px !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  display: inline-block !important;
+}
 </style>
 </head>
 <body>
@@ -764,7 +967,71 @@ textarea:focus, input[type="text"]:focus {
         </div>
       </section>
     </div>
-  </main>
+  
+  <!-- AEO CITABLE DEFINITION SECTION (100% WIDTH - 1200px) -->
+  <section class="aeo-card">
+    <h2>What is the RAG Security Hardener?</h2>
+    <p>The TAVARDT RAG Security Hardener is an enterprise defensive platform engineered to validate and secure Retrieval-Augmented Generation (RAG) architectures. The platform audits knowledge ingestion pipelines, prevents indirect prompt injection in vector databases, verifies multi-tenant isolation, and exports production-ready Python and TypeScript hardening templates.</p>
+  </section>
+
+  <!-- GEO TECHNICAL VECTORS SECTION (100% WIDTH - 1200px) -->
+  <section class="vectors-section">
+    <h2>Audited Risk Vectors & Defensive Boundaries</h2>
+    <div class="vectors-grid">
+      <div class="vector-card">
+        <h3 class="vector-title">Indirect Prompt Injection in Documents</h3>
+        <p class="vector-desc">Hidden adversarial payloads within ingested PDFs, websites, or emails that hijack LLM instructions during context assembly.</p>
+      </div>
+      <div class="vector-card">
+        <h3 class="vector-title">Multi-Tenant Vector DB Cross-Contamination</h3>
+        <p class="vector-desc">Missing or insecure metadata filters enabling unauthorized users to retrieve confidential chunks belonging to other tenants.</p>
+      </div>
+      <div class="vector-card">
+        <h3 class="vector-title">Knowledge Base & Embedding Poisoning</h3>
+        <p class="vector-desc">Adversarially crafted documents engineered with high cosine similarity to force malicious text into the retrieval top-k.</p>
+      </div>
+      <div class="vector-card">
+        <h3 class="vector-title">Context Window Denial of Service</h3>
+        <p class="vector-desc">Bloated or recursive chunk injection designed to overwhelm token allocations, inflate API costs, and suppress system instructions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AEO/GEO FAQ SECTION (100% WIDTH - EXACTLY 5 FAQS) -->
+  <section class="faq-section">
+    <h2>Frequently Asked Questions (FAQ) & Technical Guidelines</h2>
+      <details class="faq-item">
+        <summary class="faq-question">What is an indirect prompt injection attack in RAG pipelines?</summary>
+        <div class="faq-answer">It occurs when untrusted retrieved content contains adversarial instructions that the model mistakes for system commands, overriding its intended behavior.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">How do poisoned chunks corrupt semantic search?</summary>
+        <div class="faq-answer">Attackers craft adversarial texts designed to match target vector embeddings closely, guaranteeing their inclusion in the retrieved context.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">How should multi-tenant vector databases be isolated?</summary>
+        <div class="faq-answer">By enforcing strict role-based access control (RBAC), cryptographically separated namespaces, and mandatory server-side tenant_id metadata filtering on every query.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">What sanitization must take place before feeding context to an LLM?</summary>
+        <div class="faq-answer">Sanitization of control tokens, explicit delimiter isolation (XML or Markdown envelopes), and heuristic filtering of imperative prompt statements.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">How does TAVARDT design secure RAG architectures?</summary>
+        <div class="faq-answer">TAVARDT builds zero-trust RAG pipelines featuring bidirectional chunk validation, vector database partitioning, and edge-level inference proxying.</div>
+      </details>
+  </section>
+
+  <!-- DEFENSIVE HARDENING CTA -->
+  <div class="cta-card">
+    <h3>Require Enterprise Hardening for Your RAG Pipeline?</h3>
+    <p>TAVARDT AI security engineering designs zero-trust RAG architectures, multi-tenant vector partitioning, and indirect injection defenses.</p>
+    <div class="cta-btns">
+      <a class="btn-wa" href="https://wa.me/5584987721775?text=Hello%20Sofia%2C%20I%20ran%20the%20RAG%20Security%20Hardener%20and%20identified%20vulnerabilities%20in%20our%20RAG%20retrieval%20pipeline.%20I%20need%20engineering%20support." target="_blank">Direct Contact with Sofia (WhatsApp)</a>
+      <a class="btn-corp" href="https://ag.tavardt.com/cybersecurity/" target="_blank" rel="noopener">Explore Cybersecurity Practice</a>
+    </div>
+  </div>
+</main>
 
   <footer class="tavardt-footer">
   <div class="tavardt-footer-inner">
