@@ -13,7 +13,7 @@ Retrieval-Augmented Generation (RAG) pipelines introduce critical security bound
 
 This repository provides both an interactive client-side web application and a lightweight, zero-dependency Python CLI tool to audit RAG architectures and export defensive hardening blueprints.
 
-## Interactive Web Application (GitHub Pages)
+## Interactive Web Application
 
 Access the live online tool and evaluate your pipeline architecture in real-time:
 
