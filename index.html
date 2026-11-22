@@ -613,13 +613,15 @@
     padding: 36px;
     margin-bottom: 48px;
   }
-  .aeo-badge {
+  .aeo-badge, #aeo-badge {
     font-size: 0.75rem;
     font-weight: 800;
-    color: var(--accent);
+    color: #839bc8 !important;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: center;
+    display: block;
   }
   .aeo-title {
     font-size: 1.4rem;
@@ -1158,7 +1160,7 @@
     </section>
 
     <section class="aeo-section">
-      <div class="aeo-badge">DEFENSIVE SECURITY STANDARD FOR AI</div>
+      <div class="aeo-badge" id="aeo-badge">DEFENSIVE SECURITY STANDARD FOR AI</div>
       <h2 class="aeo-title">What is the Indirect Prompt Injection Vulnerability in RAG Pipelines?</h2>
       <div class="aeo-content">
         <p>Indirect prompt injection in Retrieval-Augmented Generation (RAG) pipelines occurs when an adversary poisons third-party documents, web pages, or enterprise knowledge repositories with concealed malicious instructions. During semantic search, the vector database retrieves these poisoned chunks and concatenates them into the LLM context window alongside the legitimate user query.</p>
