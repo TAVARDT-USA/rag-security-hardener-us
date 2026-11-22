@@ -1,22 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="en-US">
 <head>
-  <!-- Preconnect to Google Tag Manager for Maximum Performance -->
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<!-- Preconnect to Google Tag Manager for Maximum Performance -->
+<link href="https://www.googletagmanager.com" rel="preconnect"/>
+<link href="https://www.googletagmanager.com" rel="dns-prefetch"/>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-MMCFLS3D');</script>
-  <!-- End Google Tag Manager -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAG Pipeline Security Validator & Defense Hardening Toolkit | TAVARDT United States</title>
-  <meta name="description" content="Interactive web auditor and CLI tool for developers to inspect, audit, and harden Retrieval-Augmented Generation (RAG) pipelines against indirect context injections and data leaks.">
-  <style>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RAG Pipeline Security Validator &amp; Defense Hardening Toolkit | TAVARDT United States</title>
+<meta content="Interactive web auditor and CLI tool for developers to inspect, audit, and harden Retrieval-Augmented Generation (RAG) pipelines against indirect context injections and data leaks." name="description"/>
+<style>
     :root {
       --bg: #070b14;
       --surface: #0f172a;
@@ -131,273 +131,293 @@
     .btn-act { background: var(--accent); color: #ffffff; border: none; padding: 0.45rem 1rem; border-radius: 0.375rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: all 0.2s; }
     .btn-act:hover { background: #0891b2; }
 
-    footer { background: var(--surface); border-top: 1px solid var(--border); padding: 1.5rem 2rem; margin-top: 3rem; text-align: center; font-size: 0.85rem; color: var(--text-muted); }
+    footer { background: var(--surface); border-top: 1px solid var(--border); padding: 1.5rem 2rem; margin-top: 3rem; text-align: left !important; font-size: 0.85rem; color: var(--text-muted); }
     footer a { color: var(--accent); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
   </style>
+<style>
+/* TAVARDT Header Sticky & Fixed Layout Across Devices */
+header.tavardt-header, header {
+  position: sticky !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+  background: rgba(5, 5, 16, 0.95) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+.tavardt-brand-dot {
+  color: #1e00ff !important;
+}
+.tavardt-footer, .tavardt-footer-inner, .tavardt-footer-col, .tavardt-footer-bottom, footer, footer div {
+  text-align: left !important;
+}
+.tavardt-footer-bottom p {
+  text-align: left !important;
+  margin: 0 !important;
+}
+@media (max-width: 640px) {
+  .tavardt-header-inner {
+    padding: 12px 16px !important;
+  }
+  .tavardt-nav {
+    gap: 16px !important;
+    flex-wrap: nowrap !important;
+  }
+  .tavardt-nav-link {
+    font-size: 0.82rem !important;
+    white-space: nowrap !important;
+  }
+}
+</style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMCFLS3D"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-MMCFLS3D" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+<div class="brand">TAVARDT<span class="tavardt-brand-dot">.</span></div>
+<div class="nav-links">
+<a href="https://ag.tavardt.com/" rel="noopener" target="_blank">Portal</a>
+<a href="https://tools.tavardt.com/" rel="noopener" target="_blank">Tools</a>
 
-  <header>
-    <div class="brand">TAVARDT United States</div>
-    <div class="nav-links">
-      <a href="https://ag.tavardt.com/" target="_blank" rel="noopener">Portal</a>
-      <a href="https://tools.tavardt.com/" target="_blank" rel="noopener">Tools Hub</a>
-      <a href="https://ag.tavardt.com/contact/" target="_blank" rel="noopener">Contact</a>
-    </div>
-  </header>
-
-  <main class="main-wrap">
-    <div class="hero">
-      <h1>RAG Pipeline Security Validator & Defense Hardening Toolkit</h1>
-      <p>Context Isolation Audit, Indirect Injection Prevention, and Defensive AI Engineering</p>
-    </div>
-
-    <div class="workspace-grid">
-      <!-- Painel Esquerdo: Arquitetura RAG em Etapas Visuais -->
-      <section class="panel">
-        <div class="panel-header">
-          <h2>RAG Architecture Boundaries</h2>
-          <div class="preset-bar">
-            <button class="btn-preset" id="preset-vuln">&bull; Vulnerable Scenario</button>
-            <button class="btn-preset active-hard" id="preset-hard">&check; Hardened Architecture</button>
-          </div>
-        </div>
-
-        <div class="panel-body">
-          <!-- Etapa 1 -->
-          <div class="stage-card">
-            <div class="stage-title">
-              <span>1. Document Ingestion & Data Sources</span>
-              <span class="stage-number">STAGE 01</span>
-            </div>
-            <div class="options-grid" data-stage="ingestion">
-              <div class="opt-tile" data-val="1">
-                <div class="opt-header">
-                  <div class="opt-name">Open Sources</div>
-                  <span class="opt-tag tag-danger">Insecure</span>
-                </div>
-                <div class="opt-desc">Third-party uploads and unauthenticated web scraping.</div>
-              </div>
-              <div class="opt-tile" data-val="2">
-                <div class="opt-header">
-                  <div class="opt-name">Basic Sanitizer</div>
-                  <span class="opt-tag tag-warn">Partial</span>
-                </div>
-                <div class="opt-desc">HTML tag stripping without semantic injection checks.</div>
-              </div>
-              <div class="opt-tile selected level-safe" data-val="3">
-                <div class="opt-header">
-                  <div class="opt-name">Authenticated Sources</div>
-                  <span class="opt-tag tag-safe">Hardened</span>
-                </div>
-                <div class="opt-desc">Cryptographic signatures and provenance verification.</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Etapa 2 -->
-          <div class="stage-card">
-            <div class="stage-title">
-              <span>2. Vector DB Multi-Tenant Isolation</span>
-              <span class="stage-number">STAGE 02</span>
-            </div>
-            <div class="options-grid" data-stage="vectordb">
-              <div class="opt-tile" data-val="1">
-                <div class="opt-header">
-                  <div class="opt-name">Single Collection</div>
-                  <span class="opt-tag tag-danger">Insecure</span>
-                </div>
-                <div class="opt-desc">Shared collection without tenant namespace partitioning.</div>
-              </div>
-              <div class="opt-tile" data-val="2">
-                <div class="opt-header">
-                  <div class="opt-name">Metadata Filter</div>
-                  <span class="opt-tag tag-warn">Partial</span>
-                </div>
-                <div class="opt-desc">Tenant ID in query metadata without formal RBAC enforcement.</div>
-              </div>
-              <div class="opt-tile selected level-safe" data-val="3">
-                <div class="opt-header">
-                  <div class="opt-name">RBAC Isolation</div>
-                  <span class="opt-tag tag-safe">Hardened</span>
-                </div>
-                <div class="opt-desc">Strict partitioned namespaces with role-based access control.</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Etapa 3 -->
-          <div class="stage-card">
-            <div class="stage-title">
-              <span>3. Context Injection Prompt Boundary</span>
-              <span class="stage-number">STAGE 03</span>
-            </div>
-            <div class="options-grid" data-stage="context">
-              <div class="opt-tile" data-val="1">
-                <div class="opt-header">
-                  <div class="opt-name">Direct Concat</div>
-                  <span class="opt-tag tag-danger">Insecure</span>
-                </div>
-                <div class="opt-desc">Raw retrieved chunks interpolated directly into prompt string.</div>
-              </div>
-              <div class="opt-tile" data-val="2">
-                <div class="opt-header">
-                  <div class="opt-name">Simple Delimiters</div>
-                  <span class="opt-tag tag-warn">Partial</span>
-                </div>
-                <div class="opt-desc">Markdown blocks or quotes without closing tag escaping.</div>
-              </div>
-              <div class="opt-tile selected level-safe" data-val="3">
-                <div class="opt-header">
-                  <div class="opt-name">Confined XML Tags</div>
-                  <span class="opt-tag tag-safe">Hardened</span>
-                </div>
-                <div class="opt-desc">Strict encapsulation inside <untrusted_context> tags.</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Etapa 4 -->
-          <div class="stage-card">
-            <div class="stage-title">
-              <span>4. Indirect Prompt Injection Shield</span>
-              <span class="stage-number">STAGE 04</span>
-            </div>
-            <div class="options-grid" data-stage="indirect">
-              <div class="opt-tile" data-val="1">
-                <div class="opt-header">
-                  <div class="opt-name">No Filtering</div>
-                  <span class="opt-tag tag-danger">Insecure</span>
-                </div>
-                <div class="opt-desc">No defensive inspection before prompt assembly.</div>
-              </div>
-              <div class="opt-tile" data-val="2">
-                <div class="opt-header">
-                  <div class="opt-name">Keyword Blacklist</div>
-                  <span class="opt-tag tag-warn">Partial</span>
-                </div>
-                <div class="opt-desc">Static string matching vulnerable to synonyms and obfuscation.</div>
-              </div>
-              <div class="opt-tile selected level-safe" data-val="3">
-                <div class="opt-header">
-                  <div class="opt-name">Heuristic Filter</div>
-                  <span class="opt-tag tag-safe">Hardened</span>
-                </div>
-                <div class="opt-desc">Deep semantic anomaly scan for embedded instruction overrides.</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Etapa 5 -->
-          <div class="stage-card">
-            <div class="stage-title">
-              <span>5. Output Gate & Citation Verification</span>
-              <span class="stage-number">STAGE 05</span>
-            </div>
-            <div class="options-grid" data-stage="output">
-              <div class="opt-tile" data-val="1">
-                <div class="opt-header">
-                  <div class="opt-name">Unrestricted Output</div>
-                  <span class="opt-tag tag-danger">Insecure</span>
-                </div>
-                <div class="opt-desc">No source attribution checks or PII redaction.</div>
-              </div>
-              <div class="opt-tile" data-val="2">
-                <div class="opt-header">
-                  <div class="opt-name">Basic Citation</div>
-                  <span class="opt-tag tag-warn">Partial</span>
-                </div>
-                <div class="opt-desc">Requires citations in prose, but lacks automated PII masking.</div>
-              </div>
-              <div class="opt-tile selected level-safe" data-val="3">
-                <div class="opt-header">
-                  <div class="opt-name">Active Gate & Redaction</div>
-                  <span class="opt-tag tag-safe">Hardened</span>
-                </div>
-                <div class="opt-desc">Strict attribution enforcement and automated regex masking.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Painel Direito: Avaliação em Tempo Real & Middleware -->
-      <section class="panel">
-        <div class="panel-header">
-          <h2>Security Posture & Diagnosis</h2>
-        </div>
-
-        <div class="panel-body">
-          <!-- Circular Gauge & Status -->
-          <div class="gauge-card">
-            <div class="gauge-circle" id="gauge-circle">100<span>SCORE</span></div>
-            <div>
-              <div class="posture-status-badge badge-blindado" id="posture-badge">HARDENED - DEFENSIVE POSTURE APPROVED</div>
-              <div class="posture-summary" id="posture-summary">The pipeline implements complete context isolation, multi-tenant RBAC, and active indirect prompt injection defense.</div>
-            </div>
-          </div>
-
-          <!-- Visual Bar Indicator for 5 stages -->
-          <div class="stage-bar-wrap">
-            <div class="stage-bar-labels">
-              <span>Ingestion</span>
-              <span>Vectors</span>
-              <span>Context</span>
-              <span>Filter</span>
-              <span>Output</span>
-            </div>
-            <div class="stage-bar">
-              <div class="bar-seg" id="seg-1"></div>
-              <div class="bar-seg" id="seg-2"></div>
-              <div class="bar-seg" id="seg-3"></div>
-              <div class="bar-seg" id="seg-4"></div>
-              <div class="bar-seg" id="seg-5"></div>
-            </div>
-          </div>
-
-          <!-- Findings List -->
-          <div class="findings-header">
-            <span>Architectural Findings</span>
-            <span id="findings-count" style="font-size: 0.75rem; color: var(--emerald);">0 Alerts</span>
-          </div>
-          <div class="findings-list" id="findings-list">
-            <!-- Injected via JS -->
-          </div>
-
-          <!-- Code Blueprint Box -->
-          <div class="code-box-header">
-            <div class="code-tabs">
-              <button class="code-tab active" data-tab="python">Python Middleware</button>
-              <button class="code-tab" data-tab="node">TypeScript Guard</button>
-              <button class="code-tab" data-tab="prompt">Confined Prompt</button>
-            </div>
-            <span style="font-size: 0.72rem; color: var(--text-subtle);">Zero External Dependencies</span>
-          </div>
-          <div class="code-view" id="code-box"></div>
-
-          <div class="code-actions">
-            <button class="btn-act" id="btn-copy">Copy Code</button>
-          </div>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <footer>
-    <div>&copy; 2026 TAVARDT United States. All rights reserved.</div>
-    <div style="margin-top: 0.5rem;">
-      <a href="https://ag.tavardt.com/">Portal</a> | 
-      <a href="https://tools.tavardt.com/">Tools Hub</a> | 
-      <a href="https://ag.tavardt.com/contact/">Contact</a>
-    </div>
-  </footer>
-
-  <script>
+</div>
+</header>
+<main class="main-wrap">
+<div class="hero">
+<h1>RAG Pipeline Security Validator &amp; Defense Hardening Toolkit</h1>
+<p>Context Isolation Audit, Indirect Injection Prevention, and Defensive AI Engineering</p>
+</div>
+<div class="workspace-grid">
+<!-- Painel Esquerdo: Arquitetura RAG em Etapas Visuais -->
+<section class="panel">
+<div class="panel-header">
+<h2>RAG Architecture Boundaries</h2>
+<div class="preset-bar">
+<button class="btn-preset" id="preset-vuln">• Vulnerable Scenario</button>
+<button class="btn-preset active-hard" id="preset-hard">✓ Hardened Architecture</button>
+</div>
+</div>
+<div class="panel-body">
+<!-- Etapa 1 -->
+<div class="stage-card">
+<div class="stage-title">
+<span>1. Document Ingestion &amp; Data Sources</span>
+<span class="stage-number">STAGE 01</span>
+</div>
+<div class="options-grid" data-stage="ingestion">
+<div class="opt-tile" data-val="1">
+<div class="opt-header">
+<div class="opt-name">Open Sources</div>
+<span class="opt-tag tag-danger">Insecure</span>
+</div>
+<div class="opt-desc">Third-party uploads and unauthenticated web scraping.</div>
+</div>
+<div class="opt-tile" data-val="2">
+<div class="opt-header">
+<div class="opt-name">Basic Sanitizer</div>
+<span class="opt-tag tag-warn">Partial</span>
+</div>
+<div class="opt-desc">HTML tag stripping without semantic injection checks.</div>
+</div>
+<div class="opt-tile selected level-safe" data-val="3">
+<div class="opt-header">
+<div class="opt-name">Authenticated Sources</div>
+<span class="opt-tag tag-safe">Hardened</span>
+</div>
+<div class="opt-desc">Cryptographic signatures and provenance verification.</div>
+</div>
+</div>
+</div>
+<!-- Etapa 2 -->
+<div class="stage-card">
+<div class="stage-title">
+<span>2. Vector DB Multi-Tenant Isolation</span>
+<span class="stage-number">STAGE 02</span>
+</div>
+<div class="options-grid" data-stage="vectordb">
+<div class="opt-tile" data-val="1">
+<div class="opt-header">
+<div class="opt-name">Single Collection</div>
+<span class="opt-tag tag-danger">Insecure</span>
+</div>
+<div class="opt-desc">Shared collection without tenant namespace partitioning.</div>
+</div>
+<div class="opt-tile" data-val="2">
+<div class="opt-header">
+<div class="opt-name">Metadata Filter</div>
+<span class="opt-tag tag-warn">Partial</span>
+</div>
+<div class="opt-desc">Tenant ID in query metadata without formal RBAC enforcement.</div>
+</div>
+<div class="opt-tile selected level-safe" data-val="3">
+<div class="opt-header">
+<div class="opt-name">RBAC Isolation</div>
+<span class="opt-tag tag-safe">Hardened</span>
+</div>
+<div class="opt-desc">Strict partitioned namespaces with role-based access control.</div>
+</div>
+</div>
+</div>
+<!-- Etapa 3 -->
+<div class="stage-card">
+<div class="stage-title">
+<span>3. Context Injection Prompt Boundary</span>
+<span class="stage-number">STAGE 03</span>
+</div>
+<div class="options-grid" data-stage="context">
+<div class="opt-tile" data-val="1">
+<div class="opt-header">
+<div class="opt-name">Direct Concat</div>
+<span class="opt-tag tag-danger">Insecure</span>
+</div>
+<div class="opt-desc">Raw retrieved chunks interpolated directly into prompt string.</div>
+</div>
+<div class="opt-tile" data-val="2">
+<div class="opt-header">
+<div class="opt-name">Simple Delimiters</div>
+<span class="opt-tag tag-warn">Partial</span>
+</div>
+<div class="opt-desc">Markdown blocks or quotes without closing tag escaping.</div>
+</div>
+<div class="opt-tile selected level-safe" data-val="3">
+<div class="opt-header">
+<div class="opt-name">Confined XML Tags</div>
+<span class="opt-tag tag-safe">Hardened</span>
+</div>
+<div class="opt-desc">Strict encapsulation inside <untrusted_context> tags.</untrusted_context></div>
+</div>
+</div>
+</div>
+<!-- Etapa 4 -->
+<div class="stage-card">
+<div class="stage-title">
+<span>4. Indirect Prompt Injection Shield</span>
+<span class="stage-number">STAGE 04</span>
+</div>
+<div class="options-grid" data-stage="indirect">
+<div class="opt-tile" data-val="1">
+<div class="opt-header">
+<div class="opt-name">No Filtering</div>
+<span class="opt-tag tag-danger">Insecure</span>
+</div>
+<div class="opt-desc">No defensive inspection before prompt assembly.</div>
+</div>
+<div class="opt-tile" data-val="2">
+<div class="opt-header">
+<div class="opt-name">Keyword Blacklist</div>
+<span class="opt-tag tag-warn">Partial</span>
+</div>
+<div class="opt-desc">Static string matching vulnerable to synonyms and obfuscation.</div>
+</div>
+<div class="opt-tile selected level-safe" data-val="3">
+<div class="opt-header">
+<div class="opt-name">Heuristic Filter</div>
+<span class="opt-tag tag-safe">Hardened</span>
+</div>
+<div class="opt-desc">Deep semantic anomaly scan for embedded instruction overrides.</div>
+</div>
+</div>
+</div>
+<!-- Etapa 5 -->
+<div class="stage-card">
+<div class="stage-title">
+<span>5. Output Gate &amp; Citation Verification</span>
+<span class="stage-number">STAGE 05</span>
+</div>
+<div class="options-grid" data-stage="output">
+<div class="opt-tile" data-val="1">
+<div class="opt-header">
+<div class="opt-name">Unrestricted Output</div>
+<span class="opt-tag tag-danger">Insecure</span>
+</div>
+<div class="opt-desc">No source attribution checks or PII redaction.</div>
+</div>
+<div class="opt-tile" data-val="2">
+<div class="opt-header">
+<div class="opt-name">Basic Citation</div>
+<span class="opt-tag tag-warn">Partial</span>
+</div>
+<div class="opt-desc">Requires citations in prose, but lacks automated PII masking.</div>
+</div>
+<div class="opt-tile selected level-safe" data-val="3">
+<div class="opt-header">
+<div class="opt-name">Active Gate &amp; Redaction</div>
+<span class="opt-tag tag-safe">Hardened</span>
+</div>
+<div class="opt-desc">Strict attribution enforcement and automated regex masking.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Painel Direito: Avaliação em Tempo Real & Middleware -->
+<section class="panel">
+<div class="panel-header">
+<h2>Security Posture &amp; Diagnosis</h2>
+</div>
+<div class="panel-body">
+<!-- Circular Gauge & Status -->
+<div class="gauge-card">
+<div class="gauge-circle" id="gauge-circle">100<span>SCORE</span></div>
+<div>
+<div class="posture-status-badge badge-blindado" id="posture-badge">HARDENED - DEFENSIVE POSTURE APPROVED</div>
+<div class="posture-summary" id="posture-summary">The pipeline implements complete context isolation, multi-tenant RBAC, and active indirect prompt injection defense.</div>
+</div>
+</div>
+<!-- Visual Bar Indicator for 5 stages -->
+<div class="stage-bar-wrap">
+<div class="stage-bar-labels">
+<span>Ingestion</span>
+<span>Vectors</span>
+<span>Context</span>
+<span>Filter</span>
+<span>Output</span>
+</div>
+<div class="stage-bar">
+<div class="bar-seg" id="seg-1"></div>
+<div class="bar-seg" id="seg-2"></div>
+<div class="bar-seg" id="seg-3"></div>
+<div class="bar-seg" id="seg-4"></div>
+<div class="bar-seg" id="seg-5"></div>
+</div>
+</div>
+<!-- Findings List -->
+<div class="findings-header">
+<span>Architectural Findings</span>
+<span id="findings-count" style="font-size: 0.75rem; color: var(--emerald);">0 Alerts</span>
+</div>
+<div class="findings-list" id="findings-list">
+<!-- Injected via JS -->
+</div>
+<!-- Code Blueprint Box -->
+<div class="code-box-header">
+<div class="code-tabs">
+<button class="code-tab active" data-tab="python">Python Middleware</button>
+<button class="code-tab" data-tab="node">TypeScript Guard</button>
+<button class="code-tab" data-tab="prompt">Confined Prompt</button>
+</div>
+<span style="font-size: 0.72rem; color: var(--text-subtle);">Zero External Dependencies</span>
+</div>
+<div class="code-view" id="code-box"></div>
+<div class="code-actions">
+<button class="btn-act" id="btn-copy">Copy Code</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer>
+<div>© 2026 TAVARDT. All rights reserved.</div>
+<div style="margin-top: 0.5rem;">
+<a href="https://ag.tavardt.com/" rel="noopener" target="_blank">Portal</a> | 
+      <a href="https://tools.tavardt.com/" rel="noopener" target="_blank">Tools Hub</a> | 
+      <a href="https://ag.tavardt.com/contact/" rel="noopener" target="_blank">Contact</a>
+</div>
+</footer>
+<script>
     (function() {
       const state = {
         ingestion: 3,
