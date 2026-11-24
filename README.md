@@ -7,15 +7,10 @@
 
 **Corporate Defensive Architecture Hub and Hardening Blueprints for RAG (Retrieval-Augmented Generation) Pipelines**
 
-Developed and maintained by the Artificial Intelligence Security Engineering Division of **TAVARDT USA**.
+Developed and maintained by the Artificial Intelligence Security Engineering Division of **TAVARDT**.
 
 ***
 
-## Official Portals
-
-* **Institutional Portal**: [Portal Institucional](https://ag.tavardt.com/us/)
-* **Tools Center**: [Central de Ferramentas](https://tools.tavardt.com/us/)
-* **Contact and Technical Support**: [Canal de Contato](https://ag.tavardt.com/us/contact/)
 
 ***
 
