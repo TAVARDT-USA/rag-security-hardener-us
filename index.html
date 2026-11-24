@@ -14,7 +14,6 @@
 <title>RAG Security &amp; Context Hardening Hub | TAVARDT USA</title>
 <meta content="Corporate technical defensive specification, blueprints for mitigating Indirect Prompt Injection, vector context isolation, chunk sanitization, and deterministic CLI auditing tools." name="description"/>
 <link href="./favicon.ico" rel="icon" type="image/x-icon"/>
-
 <link href="https://tavardt-usa.github.io/rag-security-hardener-us/" rel="canonical"/>
 <link href="https://tavardt-usa.github.io/rag-security-hardener-us/" hreflang="en-US" rel="alternate"/>
 <link href="https://tavardt-usa.github.io/rag-security-hardener-us/" hreflang="x-default" rel="alternate"/>
@@ -998,7 +997,7 @@
 <header class="tavardt-header">
 <div class="tavardt-header-inner">
 <a class="tavardt-brand" href="https://ag.tavardt.com/" rel="noopener" target="_blank">
-<span class="tavardt-logo-text">TAVARDT<span class="tavardt-brand-dot">.</span></span>
+<span class="tavardt-logo-text">TAVARDT</span>
 </a>
 <nav class="tavardt-nav">
 <a class="tavardt-nav-link" href="https://ag.tavardt.com/" rel="noopener" target="_blank">Portal</a>
@@ -1096,67 +1095,23 @@ python rag_security_auditor.py</div>
 </section>
 <section class="faq-section">
 <h2 class="faq-title">Perguntas Frequentes sobre Segurança em Pipelines RAG e Bancos Vetoriais</h2>
-<div class="faq-list">
-<div class="faq-item">
-<button class="faq-btn" onclick="toggleFaq(this)" type="button">
-<span>Por que a validação de segurança de pipelines RAG não deve conectar bancos vetoriais pelo navegador?</span>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-body">
-            Bancos vetoriais de produção contêm credenciais de API críticas e dados confidenciais protegidos por VPC e firewalls. Conectar instâncias vetoriais diretamente pelo navegador exporia credenciais e violaria o princípio de menor privilégio. Por isso, a TAVARDT fornece blueprints arquiteturais e ferramentas CLI para auditoria local e segura.
-          </div>
-</div>
-<div class="faq-item">
-<button class="faq-btn" onclick="toggleFaq(this)" type="button">
-<span>O que é Indirect Prompt Injection e como ele compromete arquiteturas RAG?</span>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-body">
-            O Indirect Prompt Injection ocorre quando documentos externos indexados no banco vetorial contêm instruções maliciosas ocultas. Quando o pipeline RAG recupera esses fragmentos e os concatena no prompt do LLM, o modelo pode desviar de suas instruções originais, executando comandos indevidos ou exfiltrando dados sensíveis.
-          </div>
-</div>
-<div class="faq-item">
-<button class="faq-btn" onclick="toggleFaq(this)" type="button">
-<span>Como o isolamento de contexto com delimitadores estruturados mitiga injeções indiretas?</span>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-body">
-            Ao encapsular os dados recuperados em blocos delimitados (como tags XML &lt;context&gt;...&lt;/context&gt;) e instruir o modelo a tratar o conteúdo estritamente como dado passivo de referência, cria-se uma barreira semântica clara que impede o interpretador do LLM de tratar instruções de terceiros como comandos executáveis.
-          </div>
-</div>
-<div class="faq-item">
-<button class="faq-btn" onclick="toggleFaq(this)" type="button">
-<span>Qual a importância do controle de acesso baseado em metadados (ACL/RBAC) em buscas vetoriais?</span>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-body">
-            Em ambientes corporativos, diferentes usuários possuem diferentes níveis de autorização. O controle por metadados assegura que a consulta vetorial aplique filtros obrigatórios de identidade e perfil antes da busca por similaridade, impedindo que um usuário recupere fragmentos confidenciais aos quais não tem direito de acesso.
-          </div>
-</div>
-<div class="faq-item">
-<button class="faq-btn" onclick="toggleFaq(this)" type="button">
-<span>Quais práticas recomendadas devem ser adotadas no pipeline de ingestão de documentos?</span>
-<span class="faq-icon">+</span>
-</button>
-<div class="faq-body">
-            A esteira de ingestão deve realizar sanitização de texto, remoção de caracteres de controle invisíveis, verificação de integridade de fonte (source verification), chunking padronizado e detecção de padrões de injeção antes da geração e armazenamento dos embeddings no banco vetorial.
-          </div>
-</div>
-</div>
+<div class="faq-list"><div class="faq-item"><div class="faq-question">Por que a validação de segurança de pipelines RAG não deve conectar bancos vetoriais pelo navegador?<span class="faq-toggle">+</span></div><div class="faq-answer">Bancos vetoriais de produção contêm credenciais de API críticas e dados confidenciais protegidos por VPC e firewalls. Conectar instâncias vetoriais diretamente pelo navegador exporia credenciais e violaria o princípio de menor privilégio. Por isso, a TAVARDT fornece blueprints arquiteturais e ferramentas CLI para auditoria local e segura.</div></div><div class="faq-item"><div class="faq-question">O que é Indirect Prompt Injection e como ele compromete arquiteturas RAG?<span class="faq-toggle">+</span></div><div class="faq-answer">O Indirect Prompt Injection ocorre quando documentos externos indexados no banco vetorial contêm instruções maliciosas ocultas. Quando o pipeline RAG recupera esses fragmentos e os concatena no prompt do LLM, o modelo pode desviar de suas instruções originais, executando comandos indevidos ou exfiltrando dados sensíveis.</div></div><div class="faq-item"><div class="faq-question">Como o isolamento de contexto com delimitadores estruturados mitiga injeções indiretas?<span class="faq-toggle">+</span></div><div class="faq-answer">Ao encapsular os dados recuperados em blocos delimitados (como tags XML &lt;context&gt;...&lt;/context&gt;) e instruir o modelo a tratar o conteúdo estritamente como dado passivo de referência, cria-se uma barreira semântica clara que impede o interpretador do LLM de tratar instruções de terceiros como comandos executáveis.</div></div><div class="faq-item"><div class="faq-question">Qual a importância do controle de acesso baseado em metadados (ACL/RBAC) em buscas vetoriais?<span class="faq-toggle">+</span></div><div class="faq-answer">Em ambientes corporativos, diferentes usuários possuem diferentes níveis de autorização. O controle por metadados assegura que a consulta vetorial aplique filtros obrigatórios de identidade e perfil antes da busca por similaridade, impedindo que um usuário recupere fragmentos confidenciais aos quais não tem direito de acesso.</div></div><div class="faq-item"><div class="faq-question">Quais práticas recomendadas devem ser adotadas no pipeline de ingestão de documentos?<span class="faq-toggle">+</span></div><div class="faq-answer">A esteira de ingestão deve realizar sanitização de texto, remoção de caracteres de controle invisíveis, verificação de integridade de fonte (source verification), chunking padronizado e detecção de padrões de injeção antes da geração e armazenamento dos embeddings no banco vetorial.</div></div></div>
 </section>
+
 <div class="cta-card">
-<h3>Precisa de Blindagem Corporativa para Aplicações RAG e Bancos Vetoriais?</h3>
-<p>A equipe de engenharia e IA da TAVARDT audita arquiteturas de busca semântica, implementa defesas contra Indirect Prompt Injection, configura isolamento de metadados vetoriais e estabelece guardrails de saída para seus modelos de linguagem em até 24 horas.</p>
+<h3>Need Enterprise Hardening for RAG Applications &amp; Vector Databases?</h3>
+<p>The TAVARDT cybersecurity and AI engineering team audits vector ingestion architectures, prevents indirect prompt injection, and deploys edge semantic guardrails within 24 hours.</p>
 <div class="cta-btns">
-<a class="btn-wa" href="https://wa.me/5584987721775?text=Ol%C3%A1%20Sofia%2C%20consultei%20o%20RAG%20Security%20Hardener%20da%20TAVARDT%20e%20gostaria%20de%20apoio%20t%C3%A9cnico%20para%20blindagem%20dos%20meus%20pipelines%20de%20IA." rel="noopener" target="_blank">Atendimento Direto com a Sofia (WhatsApp)</a>
-<a class="btn-corp" href="https://ag.tavardt.com/ciberseguranca/" rel="noopener" target="_blank">Ver Serviços de Cibersegurança</a>
+<a class="btn-wa" href="https://wa.me/5584987721775?text=Hello%20Sofia%2C%20I%20used%20the%20RAG%20Security%20Hardener%20at%20TAVARDT%20USA%20and%20would%20like%20technical%20support%20hardening%20our%20AI%20pipelines." rel="noopener" target="_blank">Direct Support with Sofia (WhatsApp)</a>
+<a class="btn-corp" href="https://ag.tavardt.com/cybersecurity/" rel="noopener" target="_blank">Explore Cybersecurity Services</a>
 </div>
 </div>
+
 </main>
 <footer class="tavardt-footer">
 <div class="tavardt-footer-inner">
 <div class="tavardt-footer-col">
-<div class="tavardt-footer-logo">TAVARDT<span class="tavardt-brand-dot">.</span></div>
+<div class="tavardt-footer-logo">TAVARDT</div>
 <p class="tavardt-footer-mission">Transformamos negócios invisíveis em marcas reconhecidas e seguras no mercado digital.</p>
 </div>
 <div class="tavardt-footer-col">
