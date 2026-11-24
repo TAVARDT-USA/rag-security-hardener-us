@@ -113,13 +113,13 @@ def main():
         description="Security Scanner and Validator for RAG and AI Pipelines",
         epilog="Official Portals: https://ag.tavardt.com/ | https://tools.tavardt.com/"
     )
-    parser.add_argument("--ingestion", type=int, choices=[1, 2, 3], default=3, help="Ingestion level: 1=Untrusted, 2=Mixed, 3=Cryptographically verified")
-    parser.add_argument("--vector-db", type=int, choices=[1, 2, 3], default=3, help="Vector DB isolation: 1=Shared, 2=Namespaces, 3=Strict RBAC")
-    parser.add_argument("--context-boundary", type=int, choices=[1, 2, 3], default=3, help="Context boundary: 1=Direct concat, 2=XML tags, 3=Strict encapsulation")
-    parser.add_argument("--indirect-filter", type=int, choices=[1, 2, 3], default=3, help="Indirect injection filter: 1=None, 2=Keyword blacklist, 3=Heuristic defensive filter")
-    parser.add_argument("--output-gate", type=int, choices=[1, 2, 3], default=3, help="Output gate: 1=None, 2=Basic citations, 3=Strict gate with data masking")
-    parser.add_argument("--export-blueprint", type=str, metavar="PATH", help="Export defensive Python middleware file to the specified path")
-    parser.add_argument("--json", action="store_true", help="Output audit results in JSON format")
+    parser.add_argument("-ingestion", "--ingestion", type=int, choices=[1, 2, 3], default=3, help="Ingestion level: 1=Untrusted, 2=Mixed, 3=Cryptographically verified")
+    parser.add_argument("-vector-db", "--vector-db", type=int, choices=[1, 2, 3], default=3, help="Vector DB isolation: 1=Shared, 2=Namespaces, 3=Strict RBAC")
+    parser.add_argument("-context-boundary", "--context-boundary", type=int, choices=[1, 2, 3], default=3, help="Context boundary: 1=Direct concat, 2=XML tags, 3=Strict encapsulation")
+    parser.add_argument("-indirect-filter", "--indirect-filter", type=int, choices=[1, 2, 3], default=3, help="Indirect injection filter: 1=None, 2=Keyword blacklist, 3=Heuristic defensive filter")
+    parser.add_argument("-output-gate", "--output-gate", type=int, choices=[1, 2, 3], default=3, help="Output gate: 1=None, 2=Basic citations, 3=Strict gate with data masking")
+    parser.add_argument("-export-blueprint", "--export-blueprint", type=str, metavar="PATH", help="Export defensive Python middleware file to the specified path")
+    parser.add_argument("-json", "--json", action="store_true", help="Output audit results in JSON format")
 
     args = parser.parse_args()
 
