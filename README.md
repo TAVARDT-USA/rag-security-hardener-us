@@ -4,6 +4,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![OWASP LLM](https://img.shields.io/badge/OWASP-LLM%20Top%2010-red.svg)](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 [![MITRE ATLAS](https://img.shields.io/badge/MITRE-ATLAS%20Matrix-orange.svg)](https://atlas.mitre.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 **Corporate Defensive Architecture Hub and Hardening Blueprints for RAG (Retrieval-Augmented Generation) Pipelines**
 
@@ -50,6 +51,20 @@ python3 rag_security_auditor.py
 # 3. Output results in machine-readable JSON format
 python3 rag_security_auditor.py -json
 ```
+
+***
+
+## Governance and Sovereignty
+
+* **Sovereign Unit**: [TAVARDT United States](https://ag.tavardt.com/us/) (`TAVARDT-USA`)
+* **Core Standards**: [00-core Governance](https://github.com/TAVARDT-USA/00-core)
+* **Diagnostic Portal**: [TAVARDT US Diagnostic Suite](https://tools.tavardt.com/us/)
+* **Enterprise Security**: [TAVARDT US Cybersecurity](https://ag.tavardt.com/us/cybersecurity/)
+
+***
+
+### License
+Released under the MIT License. See [LICENSE](LICENSE) for full details.
 
 ***
 
