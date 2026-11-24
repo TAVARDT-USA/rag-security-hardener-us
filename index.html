@@ -1,47 +1,40 @@
 <!DOCTYPE html>
+
 <html lang="en-US">
 <head>
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<link href="https://www.googletagmanager.com" rel="preconnect"/>
+<link href="https://www.googletagmanager.com" rel="dns-prefetch"/>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-MMCFLS3D');</script>
-  
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RAG Security &amp; Context Hardening Hub | TAVARDT USA</title>
+<meta content="Corporate technical defensive specification, blueprints for mitigating Indirect Prompt Injection, vector context isolation, chunk sanitization, and deterministic CLI auditing tools." name="description"/>
+<link href="./favicon.ico" rel="icon" type="image/x-icon"/>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAG Security &amp; Context Hardening Hub | TAVARDT USA</title>
-  <meta name="description" content="Corporate technical defensive specification, blueprints for mitigating Indirect Prompt Injection, vector context isolation, chunk sanitization, and deterministic CLI auditing tools.">
-  <link rel="icon" type="image/x-icon" href="./favicon.ico">
-  <link rel="shortcut icon" href="./favicon.ico">
-  <link rel="canonical" href="https://tavardt-usa.github.io/rag-security-hardener-us/">
-  <link rel="alternate" hreflang="en-US" href="https://tavardt-usa.github.io/rag-security-hardener-us/">
-  <link rel="alternate" hreflang="x-default" href="https://tavardt-usa.github.io/rag-security-hardener-us/">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="TAVARDT USA">
-  <meta property="og:title" content="RAG Security &amp; Context Hardening Hub | TAVARDT">
-  <meta property="og:description" content="Especificações técnicas corporativas e blueprints de proteção contra Prompt Injection, exfiltração de dados e envenenamento em pipelines RAG.">
-  <meta property="og:url" content="https://tavardt-usa.github.io/rag-security-hardener-us/">
-  <meta property="og:image" content="https://tavardt-usa.github.io/rag-security-hardener-us/og-image.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="TAVARDT USA">
-  <meta property="og:locale" content="en_US">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@tavardt">
-  <meta name="twitter:title" content="Hub de Hardening RAG &amp; Segurança de IA | TAVARDT USA">
-  <meta name="twitter:description" content="Mitigação de vulnerabilidades em bancos vetoriais e pipelines RAG com blueprints de arquitetura e CLI determinístico.">
-  <meta name="twitter:image" content="https://tavardt-usa.github.io/rag-security-hardener-us/og-image.jpg">
-
-  <script type="application/ld+json">
+<link href="https://tavardt-usa.github.io/rag-security-hardener-us/" rel="canonical"/>
+<link href="https://tavardt-usa.github.io/rag-security-hardener-us/" hreflang="en-US" rel="alternate"/>
+<link href="https://tavardt-usa.github.io/rag-security-hardener-us/" hreflang="x-default" rel="alternate"/>
+<meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots"/>
+<meta content="website" property="og:type"/>
+<meta content="TAVARDT USA" property="og:site_name"/>
+<meta content="RAG Security &amp; Context Hardening Hub | TAVARDT" property="og:title"/>
+<meta content="Especificações técnicas corporativas e blueprints de proteção contra Prompt Injection, exfiltração de dados e envenenamento em pipelines RAG." property="og:description"/>
+<meta content="https://tavardt-usa.github.io/rag-security-hardener-us/" property="og:url"/>
+<meta content="https://tavardt-usa.github.io/rag-security-hardener-us/og-image.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="TAVARDT USA" property="og:image:alt"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tavardt" name="twitter:site"/>
+<meta content="Hub de Hardening RAG &amp; Segurança de IA | TAVARDT USA" name="twitter:title"/>
+<meta content="Mitigação de vulnerabilidades em bancos vetoriais e pipelines RAG com blueprints de arquitetura e CLI determinístico." name="twitter:description"/>
+<meta content="https://tavardt-usa.github.io/rag-security-hardener-us/og-image.jpg" name="twitter:image"/>
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -155,8 +148,7 @@
     ]
   }
   </script>
-
-  <style>
+<style>
     * {
       box-sizing: border-box;
       margin: 0;
@@ -1002,206 +994,189 @@
   </style>
 </head>
 <body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMCFLS3D"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-  <header class="tavardt-header">
-    <div class="tavardt-header-inner">
-      <a class="tavardt-brand" href="https://ag.tavardt.com/us/" rel="noopener" target="_blank">
-        <span class="tavardt-logo-text">TAVARDT<span class="tavardt-brand-dot">.</span></span>
-      </a>
-      <nav class="tavardt-nav">
-        <a class="tavardt-nav-link" href="https://ag.tavardt.com/us/" rel="noopener" target="_blank">Portal</a>
-        <a class="tavardt-nav-link" href="https://tools.tavardt.com/us/" rel="noopener" target="_blank">Ferramentas</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="tavardt-main">
-    <section class="hero-section">
-      <h1 class="hero-title">Defensive Architecture Hub &amp; Hardening de Segurança em Pipelines RAG</h1>
-      <p class="hero-subtitle">Especificação técnica corporativa de proteção contra Indirect Prompt Injection, exfiltração de embeddings, envenenamento de contexto vetorial, políticas de sanitização de chunks e ferramental CLI determinístico.</p>
-    </section>
-
-    <div class="cli-card">
-      <div class="cli-header">
-        <span class="cli-title">Testes em terminal Local CLI</span>
-        <button class="btn-copy-cli" id="btn-copy-cli" onclick="copyCliCommand()" type="button" aria-label="Copiar comando">
-          <span class="btn-copy-cli-text">Copy</span>
-          <span class="btn-copy-cli-icon" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg></span>
-        </button>
-      </div>
-      <div class="cli-body">
-        <p class="cli-desc">Para inspecionar seus prompts, esteiras de ingestão vetorial e configurações de segurança de pipelines RAG diretamente no seu ambiente corporativo, execute o utilitário oficial em Python:</p>
-        <div class="cli-code-terminal" id="cli-terminal-code"><span class="cli-comment"># 1. Obter o script de auditoria no repositório oficial</span>
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-MMCFLS3D" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<header class="tavardt-header">
+<div class="tavardt-header-inner">
+<a class="tavardt-brand" href="https://ag.tavardt.com/us/" rel="noopener" target="_blank">
+<span class="tavardt-logo-text">TAVARDT<span class="tavardt-brand-dot">.</span></span>
+</a>
+<nav class="tavardt-nav">
+<a class="tavardt-nav-link" href="https://ag.tavardt.com/us/" rel="noopener" target="_blank">Portal</a>
+<a class="tavardt-nav-link" href="https://tools.tavardt.com/us/" rel="noopener" target="_blank">Ferramentas</a>
+</nav>
+</div>
+</header>
+<main class="tavardt-main">
+<section class="hero-section">
+<h1 class="hero-title">Defensive Architecture Hub &amp; Hardening de Segurança em Pipelines RAG</h1>
+<p class="hero-subtitle">Especificação técnica corporativa de proteção contra Indirect Prompt Injection, exfiltração de embeddings, envenenamento de contexto vetorial, políticas de sanitização de chunks e ferramental CLI determinístico.</p>
+</section>
+<div class="cli-card">
+<div class="cli-header">
+<span class="cli-title">Testes em terminal Local CLI</span>
+<button aria-label="Copiar comando" class="btn-copy-cli" id="btn-copy-cli" onclick="copyCliCommand()" type="button">
+<span class="btn-copy-cli-text">Copy</span>
+<span aria-hidden="true" class="btn-copy-cli-icon"><svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg></span>
+</button>
+</div>
+<div class="cli-body">
+<p class="cli-desc">Para inspecionar seus prompts, esteiras de ingestão vetorial e configurações de segurança de pipelines RAG diretamente no seu ambiente corporativo, execute o utilitário oficial em Python:</p>
+<div class="cli-code-terminal" id="cli-terminal-code"><span class="cli-comment"># 1. Obter o script de auditoria no repositório oficial</span>
 curl -sO https://raw.githubusercontent.com/TAVARDT-USA/rag-security-hardener-us/main/rag_security_auditor.py
 
 <span class="cli-comment"># 2. Run deterministic RAG pipeline security audit</span>
 python rag_security_auditor.py</div>
-        <div class="cli-features">
-          <div class="cli-feature-tag"><strong>Deterministic Inspection</strong>Template and chunking validation</div>
-          <div class="cli-feature-tag"><strong>Data Protection</strong>Metadata and ACL verification</div>
-          <div class="cli-feature-tag"><strong>Zero Simulação</strong>Regras OWASP LLM validadas</div>
-        </div>
-      </div>
-    </div>
-
-    <section class="matrix-section">
-      <h2 class="section-title">Diagnóstico Arquitetural: Pipeline RAG Padrão vs. Blindado</h2>
-      <p class="section-subtitle">Selecione uma das posturas arquiteturais para compreender as vulnerabilidades semânticas ou as barreiras defensivas do pipeline:</p>
-
-      <div class="matrix-tabs">
-        <button class="matrix-tab-btn active vuln" id="tab-scenario-vuln" onclick="switchScenario('vuln')" type="button">1. Pipeline RAG Padrão (Vulnerável)</button>
-        <button class="matrix-tab-btn hard" id="tab-scenario-hard" onclick="switchScenario('hard')" type="button">2. Pipeline RAG Blindado (Padrão TAVARDT Zero Trust)</button>
-      </div>
-
-      <div class="posture-display-card">
-        <div class="posture-status-row">
-          <span class="posture-badge badge-vuln" id="posture-badge">POSTURA PADRÃO: VULNERÁVEL A RCE &amp; ROUBO DE SEGREDO CORPORATIVO</span>
-          <span class="posture-mode-tag" id="posture-mode-tag">Configuração Insegura Com Permissões Globais Excessivas</span>
-        </div>
-        <p class="posture-summary" id="posture-summary">Pipelines convencionais frequentemente utilizam permissões globais irrestritas (write-all), disparam jobs privilegiados através de pull_request_target com checkout de código externo e consomem actions de terceiros sem fixação estrita por commit SHA, viabilizando ataques diretos de Supply Chain.</p>
-
-        <div class="routes-box">
-          <div class="routes-header">
-            <span>Mapeamento de Vetores de Injeção &amp; Superfície RAG</span>
-          </div>
-          <table class="routes-table">
-            <thead>
-              <tr>
-                <th>VECTOR / ATTACK SURFACE</th>
-                <th>OBSERVED CONFIGURATION</th>
-                <th>COMPORTAMENTO DO PIPELINE</th>
-                <th>POSTURA DE SEGURANÇA</th>
-              </tr>
-            </thead>
-            <tbody id="routes-tbody">
-            </tbody>
-          </table>
-        </div>
-
-        <div class="findings-header">
-          <span>Architectural Guidelines and Controls</span>
-          <span id="findings-count" style="color: #ef4444;">4 Active Vulnerabilities</span>
-        </div>
-        <div class="findings-list" id="findings-list">
-        </div>
-      </div>
-    </section>
-
-    <section class="blueprints-section">
-      <h2 class="section-title">Blueprints de Mitigação &amp; Configurações de Servidor</h2>
-      <p class="section-subtitle">Selecione o arquivo de configuração para visualizar e copiar manifestos blindados prontos para aplicação imediata:</p>
-
-      <div class="code-toolbar">
-        <select class="code-select" id="code-select" onchange="switchCodeTab(this.value)">
-          <option value="policy">rag-security-policy.yml (Corporate Policy)</option>
-          <option value="sanitizer">chunk-sanitizer.py (Sanitização de Chunks)</option>
-          <option value="acl">vector-acl-guard.py (Filtro de Metadados / ACL)</option>
-          <option value="template">prompt-boundary-template.py (Isolamento XML)</option>
-          <option value="cli">rag_security_auditor.py (Deterministic CLI)</option>
-        </select>
-        <button class="btn-copy" id="btn-copy-code" onclick="copyCode()" type="button">Copy</button>
-      </div>
-
-      <pre class="code-viewer-box" id="code-box"></pre>
-    </section>
-
-    <section class="aeo-section">
-      <span class="aeo-overline">PADRÃO DE SEGURANÇA DEFENSIVA PARA APLICAÇÕES RAG</span>
-      <h2 class="aeo-title">Como Proteger Pipelines RAG Corporativos contra Indirect Prompt Injection e Vazamentos?</h2>
-      <div class="aeo-content">
-        <p>Pipelines RAG (Retrieval-Augmented Generation) revolucionaram o uso de modelos de linguagem ao permitir que bases de conhecimento proprietárias sejam consultadas sob demanda. Contudo, essa arquitetura amplia significativamente a superfície de ataque ao fundir instruções operacionais com dados recuperados de documentos externos não confiáveis.</p>
-        <p>A estratégia de imunização em profundidade desenvolvida pela TAVARDT adota três barreiras essenciais: (1) sanitização e normalização Unicode na esteira de ingestão de documentos, (2) aplicação mandatória de filtros de controle de acesso baseados em metadados (ACL/RBAC) no banco vetorial antes do cálculo de similaridade, e (3) encapsulamento rígido do contexto em blocos XML delimitados (&lt;context&gt;...&lt;/context&gt;) no template de prompt do LLM, acompanhado de guardrails de saída para conter exfiltrações.</p>
-      </div>
-    </section>
-
-    <section class="faq-section">
-      <h2 class="faq-title">Perguntas Frequentes sobre Segurança em Pipelines RAG e Bancos Vetoriais</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)" type="button">
-            <span>Por que a validação de segurança de pipelines RAG não deve conectar bancos vetoriais pelo navegador?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-body">
+<div class="cli-features">
+<div class="cli-feature-tag"><strong>Deterministic Inspection</strong>Template and chunking validation</div>
+<div class="cli-feature-tag"><strong>Data Protection</strong>Metadata and ACL verification</div>
+<div class="cli-feature-tag"><strong>Zero Simulação</strong>Regras OWASP LLM validadas</div>
+</div>
+</div>
+</div>
+<section class="matrix-section">
+<h2 class="section-title">Diagnóstico Arquitetural: Pipeline RAG Padrão vs. Blindado</h2>
+<p class="section-subtitle">Selecione uma das posturas arquiteturais para compreender as vulnerabilidades semânticas ou as barreiras defensivas do pipeline:</p>
+<div class="matrix-tabs">
+<button class="matrix-tab-btn active vuln" id="tab-scenario-vuln" onclick="switchScenario('vuln')" type="button">1. Pipeline RAG Padrão (Vulnerável)</button>
+<button class="matrix-tab-btn hard" id="tab-scenario-hard" onclick="switchScenario('hard')" type="button">2. Pipeline RAG Blindado (Padrão TAVARDT Zero Trust)</button>
+</div>
+<div class="posture-display-card">
+<div class="posture-status-row">
+<span class="posture-badge badge-vuln" id="posture-badge">POSTURA PADRÃO: VULNERÁVEL A RCE &amp; ROUBO DE SEGREDO CORPORATIVO</span>
+<span class="posture-mode-tag" id="posture-mode-tag">Configuração Insegura Com Permissões Globais Excessivas</span>
+</div>
+<p class="posture-summary" id="posture-summary">Pipelines convencionais frequentemente utilizam permissões globais irrestritas (write-all), disparam jobs privilegiados através de pull_request_target com checkout de código externo e consomem actions de terceiros sem fixação estrita por commit SHA, viabilizando ataques diretos de Supply Chain.</p>
+<div class="routes-box">
+<div class="routes-header">
+<span>Mapeamento de Vetores de Injeção &amp; Superfície RAG</span>
+</div>
+<table class="routes-table">
+<thead>
+<tr>
+<th>VECTOR / ATTACK SURFACE</th>
+<th>OBSERVED CONFIGURATION</th>
+<th>COMPORTAMENTO DO PIPELINE</th>
+<th>POSTURA DE SEGURANÇA</th>
+</tr>
+</thead>
+<tbody id="routes-tbody">
+</tbody>
+</table>
+</div>
+<div class="findings-header">
+<span>Architectural Guidelines and Controls</span>
+<span id="findings-count" style="color: #ef4444;">4 Active Vulnerabilities</span>
+</div>
+<div class="findings-list" id="findings-list">
+</div>
+</div>
+</section>
+<section class="blueprints-section">
+<h2 class="section-title">Blueprints de Mitigação &amp; Configurações de Servidor</h2>
+<p class="section-subtitle">Selecione o arquivo de configuração para visualizar e copiar manifestos blindados prontos para aplicação imediata:</p>
+<div class="code-toolbar">
+<select class="code-select" id="code-select" onchange="switchCodeTab(this.value)">
+<option value="policy">rag-security-policy.yml (Corporate Policy)</option>
+<option value="sanitizer">chunk-sanitizer.py (Sanitização de Chunks)</option>
+<option value="acl">vector-acl-guard.py (Filtro de Metadados / ACL)</option>
+<option value="template">prompt-boundary-template.py (Isolamento XML)</option>
+<option value="cli">rag_security_auditor.py (Deterministic CLI)</option>
+</select>
+<button class="btn-copy" id="btn-copy-code" onclick="copyCode()" type="button">Copy</button>
+</div>
+<pre class="code-viewer-box" id="code-box"></pre>
+</section>
+<section class="aeo-section">
+<span class="aeo-overline">PADRÃO DE SEGURANÇA DEFENSIVA PARA APLICAÇÕES RAG</span>
+<h2 class="aeo-title">Como Proteger Pipelines RAG Corporativos contra Indirect Prompt Injection e Vazamentos?</h2>
+<div class="aeo-content">
+<p>Pipelines RAG (Retrieval-Augmented Generation) revolucionaram o uso de modelos de linguagem ao permitir que bases de conhecimento proprietárias sejam consultadas sob demanda. Contudo, essa arquitetura amplia significativamente a superfície de ataque ao fundir instruções operacionais com dados recuperados de documentos externos não confiáveis.</p>
+<p>A estratégia de imunização em profundidade desenvolvida pela TAVARDT adota três barreiras essenciais: (1) sanitização e normalização Unicode na esteira de ingestão de documentos, (2) aplicação mandatória de filtros de controle de acesso baseados em metadados (ACL/RBAC) no banco vetorial antes do cálculo de similaridade, e (3) encapsulamento rígido do contexto em blocos XML delimitados (&lt;context&gt;...&lt;/context&gt;) no template de prompt do LLM, acompanhado de guardrails de saída para conter exfiltrações.</p>
+</div>
+</section>
+<section class="faq-section">
+<h2 class="faq-title">Perguntas Frequentes sobre Segurança em Pipelines RAG e Bancos Vetoriais</h2>
+<div class="faq-list">
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>Por que a validação de segurança de pipelines RAG não deve conectar bancos vetoriais pelo navegador?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
             Bancos vetoriais de produção contêm credenciais de API críticas e dados confidenciais protegidos por VPC e firewalls. Conectar instâncias vetoriais diretamente pelo navegador exporia credenciais e violaria o princípio de menor privilégio. Por isso, a TAVARDT fornece blueprints arquiteturais e ferramentas CLI para auditoria local e segura.
           </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)" type="button">
-            <span>O que é Indirect Prompt Injection e como ele compromete arquiteturas RAG?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-body">
+</div>
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>O que é Indirect Prompt Injection e como ele compromete arquiteturas RAG?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
             O Indirect Prompt Injection ocorre quando documentos externos indexados no banco vetorial contêm instruções maliciosas ocultas. Quando o pipeline RAG recupera esses fragmentos e os concatena no prompt do LLM, o modelo pode desviar de suas instruções originais, executando comandos indevidos ou exfiltrando dados sensíveis.
           </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)" type="button">
-            <span>Como o isolamento de contexto com delimitadores estruturados mitiga injeções indiretas?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-body">
+</div>
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>Como o isolamento de contexto com delimitadores estruturados mitiga injeções indiretas?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
             Ao encapsular os dados recuperados em blocos delimitados (como tags XML &lt;context&gt;...&lt;/context&gt;) e instruir o modelo a tratar o conteúdo estritamente como dado passivo de referência, cria-se uma barreira semântica clara que impede o interpretador do LLM de tratar instruções de terceiros como comandos executáveis.
           </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)" type="button">
-            <span>Qual a importância do controle de acesso baseado em metadados (ACL/RBAC) em buscas vetoriais?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-body">
+</div>
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>Qual a importância do controle de acesso baseado em metadados (ACL/RBAC) em buscas vetoriais?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
             Em ambientes corporativos, diferentes usuários possuem diferentes níveis de autorização. O controle por metadados assegura que a consulta vetorial aplique filtros obrigatórios de identidade e perfil antes da busca por similaridade, impedindo que um usuário recupere fragmentos confidenciais aos quais não tem direito de acesso.
           </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-btn" onclick="toggleFaq(this)" type="button">
-            <span>Quais práticas recomendadas devem ser adotadas no pipeline de ingestão de documentos?</span>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-body">
+</div>
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>Quais práticas recomendadas devem ser adotadas no pipeline de ingestão de documentos?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
             A esteira de ingestão deve realizar sanitização de texto, remoção de caracteres de controle invisíveis, verificação de integridade de fonte (source verification), chunking padronizado e detecção de padrões de injeção antes da geração e armazenamento dos embeddings no banco vetorial.
           </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="cta-card">
-      <h3>Precisa de Blindagem Corporativa para Aplicações RAG e Bancos Vetoriais?</h3>
-      <p>A equipe de engenharia e IA da TAVARDT audita arquiteturas de busca semântica, implementa defesas contra Indirect Prompt Injection, configura isolamento de metadados vetoriais e estabelece guardrails de saída para seus modelos de linguagem em até 24 horas.</p>
-      <div class="cta-btns">
-        <a class="btn-wa" href="https://wa.me/5584987721775?text=Ol%C3%A1%20Sofia%2C%20consultei%20o%20RAG%20Security%20Hardener%20da%20TAVARDT%20e%20gostaria%20de%20apoio%20t%C3%A9cnico%20para%20blindagem%20dos%20meus%20pipelines%20de%20IA." rel="noopener" target="_blank">Atendimento Direto com a Sofia (WhatsApp)</a>
-        <a class="btn-corp" href="https://ag.tavardt.com/us/ciberseguranca/" rel="noopener" target="_blank">Ver Serviços de Cibersegurança</a>
-      </div>
-    </div>
-  </main>
-
-  <footer class="tavardt-footer">
-    <div class="tavardt-footer-inner">
-      <div class="tavardt-footer-col">
-        <div class="tavardt-footer-logo">TAVARDT<span class="tavardt-brand-dot">.</span></div>
-        <p class="tavardt-footer-mission">Transformamos negócios invisíveis em marcas reconhecidas e seguras no mercado digital.</p>
-      </div>
-      <div class="tavardt-footer-col">
-        <div class="tavardt-footer-heading">Navegação Regional</div>
-        <ul class="tavardt-footer-links">
-          <li><a href="https://ag.tavardt.com/us/" rel="noopener" target="_blank">Portal</a></li>
-          <li><a href="https://tools.tavardt.com/us/" rel="noopener" target="_blank">Ferramentas</a></li>
-          <li><a href="https://ag.tavardt.com/us/contact/" rel="noopener" target="_blank">Contato</a></li>
-        </ul>
-      </div>
-      <div class="tavardt-footer-col">
-        <div class="tavardt-footer-heading">Governança &amp; Conformidade</div>
-        <p class="tavardt-footer-compliance-text">Arquitetura defensiva e controles de cibersegurança em conformidade com as diretrizes CIS Benchmarks, OWASP Top 10 e padrões Zero Trust.</p>
-      </div>
-    </div>
-    <div class="tavardt-footer-bottom">
-      <p>&copy; 2026 TAVARDT. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <script>
+</div>
+</div>
+</section>
+<div class="cta-card">
+<h3>Precisa de Blindagem Corporativa para Aplicações RAG e Bancos Vetoriais?</h3>
+<p>A equipe de engenharia e IA da TAVARDT audita arquiteturas de busca semântica, implementa defesas contra Indirect Prompt Injection, configura isolamento de metadados vetoriais e estabelece guardrails de saída para seus modelos de linguagem em até 24 horas.</p>
+<div class="cta-btns">
+<a class="btn-wa" href="https://wa.me/5584987721775?text=Ol%C3%A1%20Sofia%2C%20consultei%20o%20RAG%20Security%20Hardener%20da%20TAVARDT%20e%20gostaria%20de%20apoio%20t%C3%A9cnico%20para%20blindagem%20dos%20meus%20pipelines%20de%20IA." rel="noopener" target="_blank">Atendimento Direto com a Sofia (WhatsApp)</a>
+<a class="btn-corp" href="https://ag.tavardt.com/us/ciberseguranca/" rel="noopener" target="_blank">Ver Serviços de Cibersegurança</a>
+</div>
+</div>
+</main>
+<footer class="tavardt-footer">
+<div class="tavardt-footer-inner">
+<div class="tavardt-footer-col">
+<div class="tavardt-footer-logo">TAVARDT<span class="tavardt-brand-dot">.</span></div>
+<p class="tavardt-footer-mission">Transformamos negócios invisíveis em marcas reconhecidas e seguras no mercado digital.</p>
+</div>
+<div class="tavardt-footer-col">
+<div class="tavardt-footer-heading">Navegação Regional</div>
+<ul class="tavardt-footer-links">
+<li><a href="https://ag.tavardt.com/us/" rel="noopener" target="_blank">Portal</a></li>
+<li><a href="https://tools.tavardt.com/us/" rel="noopener" target="_blank">Ferramentas</a></li>
+<li><a href="https://ag.tavardt.com/us/contact/" rel="noopener" target="_blank">Contato</a></li>
+</ul>
+</div>
+<div class="tavardt-footer-col">
+<div class="tavardt-footer-heading">Governança &amp; Conformidade</div>
+<p class="tavardt-footer-compliance-text">Arquitetura defensiva e controles de cibersegurança em conformidade com as diretrizes CIS Benchmarks, OWASP Top 10 e padrões Zero Trust.</p>
+</div>
+</div>
+<div class="tavardt-footer-bottom">
+<p>© 2026 TAVARDT. Todos os direitos reservados.</p>
+</div>
+</footer>
+<script>
     let currentScenario = 'vuln';
     let activeTab = 'policy';
 
@@ -1400,12 +1375,12 @@ if __name__ == "__main__":
       const data = scenariosData[scen];
       const badge = document.getElementById('posture-badge');
       badge.className = 'posture-badge ' + data.badgeClass;
-      badge.innerText = data.badgeText;
-      document.getElementById('posture-mode-tag').innerText = data.modeTag;
-      document.getElementById('posture-summary').innerText = data.summary;
+      badge.textContent = data.badgeText;
+      document.getElementById('posture-mode-tag').textContent = data.modeTag;
+      document.getElementById('posture-summary').textContent = data.summary;
 
       const findingsCount = document.getElementById('findings-count');
-      findingsCount.innerText = data.findingsCount;
+      findingsCount.textContent = data.findingsCount;
       findingsCount.style.color = data.findingsCountColor;
 
       const tbody = document.getElementById('routes-tbody');
@@ -1421,7 +1396,7 @@ if __name__ == "__main__":
       data.findings.forEach(f => {
         const item = document.createElement('div');
         item.className = 'finding-item ' + f.type;
-        item.innerText = (f.type === 'ok' ? '[CONFORME] ' : '[ALERTA CRÍTICO] ') + f.text;
+        item.textContent = (f.type === 'ok' ? '[CONFORME] ' : '[ALERTA CRÍTICO] ') + f.text;
         fList.appendChild(item);
       });
     }
@@ -1432,19 +1407,19 @@ if __name__ == "__main__":
       if (sel) sel.value = tab;
       const box = document.getElementById('code-box');
       if (box && codeTemplates[tab]) {
-        box.innerText = codeTemplates[tab];
+        box.textContent = codeTemplates[tab];
       }
     }
 
     function copyCode() {
       const code = codeTemplates[activeTab];
       if (!code) return;
-      navigator.clipboard.writeText(code).then(() => {
+      if (navigator.clipboard) navigator.clipboard.writeText(code).catch(() => {}).then(() => {
         const btn = document.getElementById('btn-copy-code');
         if (btn) {
           const orig = btn.innerText;
-          btn.innerText = 'Copiado!';
-          setTimeout(() => { btn.innerText = orig; }, 2000);
+          btn.textContent = 'Copiado!';
+          setTimeout(() => { btn.textContent = orig; }, 2000);
         }
       }).catch(() => {
         const box = document.getElementById('code-box');
@@ -1459,8 +1434,8 @@ if __name__ == "__main__":
           const btn = document.getElementById('btn-copy-code');
           if (btn) {
             const orig = btn.innerText;
-            btn.innerText = 'Copiado!';
-            setTimeout(() => { btn.innerText = orig; }, 2000);
+            btn.textContent = 'Copiado!';
+            setTimeout(() => { btn.textContent = orig; }, 2000);
           }
         }
       });
@@ -1470,15 +1445,15 @@ if __name__ == "__main__":
       const codeEl = document.getElementById('cli-terminal-code');
       if (!codeEl) return;
       const code = codeEl.innerText;
-      navigator.clipboard.writeText(code).then(() => {
+      if (navigator.clipboard) navigator.clipboard.writeText(code).catch(() => {}).then(() => {
         const btn = document.getElementById('btn-copy-cli');
         if (!btn) return;
         const textSpan = btn.querySelector('.btn-copy-cli-text');
         const iconSpan = btn.querySelector('.btn-copy-cli-icon');
         if (textSpan) {
           const origText = textSpan.innerText;
-          textSpan.innerText = 'Copiado!';
-          setTimeout(() => { textSpan.innerText = origText; }, 2000);
+          textSpan.textContent = 'Copiado!';
+          setTimeout(() => { textSpan.textContent = origText; }, 2000);
         }
         if (iconSpan) {
           const origIcon = iconSpan.innerHTML;
