@@ -4,42 +4,78 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**Corporate Defensive Architecture Hub and Hardening Blueprints for RAG (Retrieval-Augmented Generation) Pipelines**
+***
+
+Retrieval-Augmented Generation (RAG) security evaluation and context hardening engine engineered by **TAVARDT**. Grounded in OWASP LLM01, OWASP LLM04, OWASP LLM07, and MITRE ATLAS standards, this toolkit audits multi-tenant vector boundaries, strips indirect injection markers, and exports production-ready middleware.
 
 ***
 
-## Online Demonstration
+## Core Capabilities and Defensive Architecture
 
-You can inspect the technical defensive specifications, architectural diagnostic tests, and mitigation blueprints directly in your browser:
-
-* **[Official Web Application on GitHub Pages](https://tavardt-usa.github.io/rag-security-hardener-us/)**
-
-***
-
-## Hardening Blueprints Included
-
-1. **rag-security-policy.yml:** Corporate security policies defining chunk limits, XML context isolation tags, and semantic validation rules.
-2. **rag_chunk_sanitizer.py:** Sanitization pipeline stripping invisible Unicode characters, control codes, and prompt injection markers prior to embedding generation.
-3. **vector_acl_filter.json:** Vector database query schema enforcing mandatory metadata access control (RBAC/ACL) per user and tenant to prevent cross-tenant exfiltration.
-4. **rag_context_template.xml:** Context encapsulation template bounded by XML tags with strict non-execution directives for LLM engines.
-5. **rag_security_auditor.py:** Deterministic local CLI utility running in the application environment to audit pipeline configurations and verify OWASP LLM compliance.
+* **Deterministic Pipeline Auditing**: Validates context boundaries, metadata filters, and chunk quotas against formal security specifications.
+* **Automated Middleware Generation**: Exports drop-in Python guardrail classes that sanitize retrieved text and enforce strict XML encapsulation tags.
+* **Multi-Tenant Isolation Verification**: Confirms that vector database queries mandate cryptographic metadata filters to prevent cross-tenant information disclosure.
 
 ***
 
-## Deterministic CLI Utility Usage
+## Threat Vectors and Operational Impact
 
-Run the deterministic audit script directly in the RAG application environment:
+Deploying RAG workflows without structured context isolation allows adversarial data within retrieved documents to hijack model execution and leak confidential records. The toolkit evaluates five core security dimensions across the retrieval lifecycle:
+
+* **Document Ingestion Origin Integrity**: Audits untrusted ingestion pipelines against steganographic prompt injections, unicode control sequences, and malicious document formats (Deduction: up to -25 points).
+* **Vector Database Multi-Tenant Isolation**: Identifies shared vector collections lacking cryptographically verified namespace or RBAC metadata boundaries (Deduction: up to -30 points).
+* **Context Boundary Encapsulation**: Blocks raw string concatenation of retrieved documents by requiring strict XML tags with explicit containment instructions (Deduction: up to -25 points).
+* **Indirect Prompt Injection Filtering**: Deploys compiled heuristic regex filters to scrub adversarial instruction overrides embedded within retrieved chunks (Deduction: up to -20 points).
+* **Grounded Output Validation Gates**: Enforces attribution verification and PII regex masking before model completions are returned to downstream clients (Deduction: up to -15 points).
+
+Evaluated pipelines receive a cumulative score from 10 to 100 points. The system assigns clear status verdicts: **HARDENED** for scores 85 and above, **MODERATE** between 50 and 84, or **CRITICAL** below 50, triggering immediate pipeline rejection.
+
+***
+
+## CLI Installation and Execution
+
+Evaluate pipeline security or export defensive middleware using lightweight standard Python commands:
 
 ```bash
-# 1. Download audit script from official repository
-curl -sO https://raw.githubusercontent.com/TAVARDT-USA/rag-security-hardener-us/main/rag_security_auditor.py
+# Clone the official repository
+git clone https://github.com/TAVARDT-USA/rag-security-hardener-us.git
 
-# 2. Inspect pipeline configuration and defensive blueprints
-python3 rag_security_auditor.py
+# Enter workspace directory
+cd rag-security-hardener-us
 
-# 3. Output results in machine-readable JSON format
-python3 rag_security_auditor.py -json
+# Evaluate RAG pipeline across all defensive layers
+python rag_security_hardener.py -i 3 -v 3 -c 3 -f 3 -g 3
+
+# Export hardened Python middleware guardrail
+python rag_security_hardener.py -i 3 -v 3 -c 3 -f 3 -g 3 -e defensive_rag_middleware.py
+
+# Output structured JSON audit report
+python rag_security_hardener.py -i 3 -v 3 -c 3 -f 3 -g 3 -j
 ```
+
+***
+
+## Frequently Asked Technical Questions
+
+### What threat vectors does the RAG security hardener evaluate across retrieval pipelines?
+
+The toolkit audits pipelines against unverified document ingestion, cross-tenant vector leakage, prompt context boundary escapes, indirect injection payloads, and unvalidated model outputs. Evaluated pipelines receive a calibrated hardening score from 10 to 100 points, classifying architectures into HARDENED, MODERATE, or CRITICAL.
+
+### How does XML context boundary encapsulation prevent indirect prompt injections?
+
+Wrapping retrieved document chunks in strict XML containment tags isolates external knowledge from authoritative system instructions. This separation prevents malicious text inside third-party documents from being interpreted as executable system directives by the language model.
+
+### Why is vector database tenant metadata filtering critical for multi-tenant applications?
+
+Without strict namespace partitioning or cryptographic metadata filtering, semantic similarity searches can retrieve chunks belonging to different customer tenants. Enforcing tenant access control boundaries at query time eliminates lateral information leakage across organizational boundaries.
+
+### What defensive capabilities does the exported middleware blueprint provide?
+
+Generating a defensive middleware artifact with the -e parameter provides a drop-in Python guard class that scrubs injection patterns and normalizes delimiters prior to prompt assembly. This runtime sanitization layer catches adversarial instruction resets and credential extraction queries before they reach the model.
+
+### Can the toolkit enforce security compliance within automated CI/CD pipelines?
+
+The CLI tools accept pipeline parameter levels or configuration files, emitting machine-readable results with the -j flag. Automated testing jobs can programmatically inspect the resulting JSON scores to block deployments failing to meet minimum hardening thresholds.
 
 ***
 
@@ -52,7 +88,7 @@ python3 rag_security_auditor.py -json
 ***
 
 ### License
-Released under the MIT License.
+Released under the MIT License. See [LICENSE](LICENSE) for full details.
 
 ***
 
