@@ -1095,7 +1095,53 @@ python rag_security_auditor.py</div>
 </section>
 <section class="faq-section">
 <h2 class="faq-title">Frequently Asked Questions on RAG Pipeline Security &amp; Vector Databases</h2>
-<div class="faq-list"><div class="faq-item"><div class="faq-question">Why should RAG pipeline security validation not connect vector databases via browser?<span class="faq-toggle">+</span></div><div class="faq-answer">Production vector databases contain critical API credentials and sensitive data protected by VPCs and firewalls. Connecting vector instances directly through the browser exposes credentials and violates the principle of least privilege. TAVARDT provides architectural blueprints and deterministic CLI tools for local, secure auditing.</div></div><div class="faq-item"><div class="faq-question">What is Indirect Prompt Injection and how does it compromise RAG architectures?<span class="faq-toggle">+</span></div><div class="faq-answer">Indirect Prompt Injection occurs when external documents indexed in the vector database contain hidden adversarial instructions. When the RAG pipeline retrieves these fragments and concatenates them into the LLM prompt, the model can deviate from its original system instructions, executing unintended actions or exfiltrating confidential data.</div></div><div class="faq-item"><div class="faq-question">How does context isolation with structured delimiters mitigate indirect injections?<span class="faq-toggle">+</span></div><div class="faq-answer">By encapsulating retrieved data within strict structural blocks (such as XML &lt;context&gt;...&lt;/context&gt; tags) and instructing the model to treat the content purely as passive reference data, a clear semantic boundary is established that prevents the LLM from executing third-party instructions as operational commands.</div></div><div class="faq-item"><div class="faq-question">Why is metadata-based access control (ACL/RBAC) essential in vector search?<span class="faq-toggle">+</span></div><div class="faq-answer">In corporate environments, different users possess distinct authorization levels. Metadata filtering ensures the vector query enforces identity and role-based policies prior to similarity calculation, preventing unauthorized users from retrieving confidential fragments.</div></div><div class="faq-item"><div class="faq-question">What best practices should be implemented across document ingestion pipelines?<span class="faq-toggle">+</span></div><div class="faq-answer">The ingestion pipeline must perform text sanitisation, strip invisible Unicode control characters, verify source authenticity, apply normalised chunking, and scan for injection signatures before generating and committing embeddings to the vector database.</div></div></div>
+<div class="faq-list">
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>Why should RAG pipeline security validation not connect vector databases via browser?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
+Production vector databases contain critical API credentials and sensitive data protected by VPCs and firewalls. Connecting vector instances directly through the browser exposes credentials and violates the principle of least privilege. TAVARDT provides architectural blueprints and deterministic CLI tools for local, secure auditing.
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>What is Indirect Prompt Injection and how does it compromise RAG architectures?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
+Indirect Prompt Injection occurs when external documents indexed in the vector database contain hidden adversarial instructions. When the RAG pipeline retrieves these fragments and concatenates them into the LLM prompt, the model can deviate from its original system instructions, executing unintended actions or exfiltrating confidential data.
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>How does context isolation with structured delimiters mitigate indirect injections?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
+By encapsulating retrieved data within strict structural blocks (such as XML &lt;context&gt;...&lt;/context&gt; tags) and instructing the model to treat the content purely as passive reference data, a clear semantic boundary is established that prevents the LLM from executing third-party instructions as operational commands.
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>Why is metadata-based access control (ACL/RBAC) essential in vector search?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
+In corporate environments, different users possess distinct authorization levels. Metadata filtering ensures the vector query enforces identity and role-based policies prior to similarity calculation, preventing unauthorized users from retrieving confidential fragments.
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>What best practices should be implemented across document ingestion pipelines?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
+The ingestion pipeline must perform text sanitisation, strip invisible Unicode control characters, verify source authenticity, apply normalised chunking, and scan for injection signatures before generating and committing embeddings to the vector database.
+</div>
+</div>
+</div>
 </section>
 
 <div class="cta-card">
